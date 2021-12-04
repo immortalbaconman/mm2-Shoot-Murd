@@ -8,20 +8,22 @@ UIS.InputBegan:Connect(function(input, busy)
  for _, v in pairs(game:GetService("Players"):GetChildren()) do
         if v.Backpack:FindFirstChild("Knife") then
             MURD = v.Name
+            print(v.Name)
         elseif not v.Backpack:FindFirstChild("Knife") then
             if v.Character:FindFirstChild("Knife") then
                 MURD = v.Name
+                print(v.Name)
         end
     end
 end
 
-game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(Players[MURD].Character.HumanoidRootPart.CFrame.X, Players[MURD].Character.HumanoidRootPart.CFrame.Y, Players[MURD].Character.HumanoidRootPart.CFrame.Z + 4))
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(game:GetService("Workspace"):FindFirstChild(MURD, true).HumanoidRootPart.CFrame.X,game:GetService("Workspace"):FindFirstChild(MURD, true).HumanoidRootPart.CFrame.Y,game:GetService("Workspace"):FindFirstChild(MURD, true).HumanoidRootPart.CFrame.Z + 4))
 
 wait(.3)
 
 local args = {
     [1] = 1,
-    [2] = Vector3.new(Players[MURD].Character.HumanoidRootPart.CFrame.X,Players[MURD].Character.HumanoidRootPart.CFrame.Y,Players[MURD].Character.HumanoidRootPart.CFrame.Z),
+    [2] = Vector3.new(Players:FindFirstChild(MURD).Character.HumanoidRootPart.CFrame.X,Players:FindFirstChild(MURD).Character.HumanoidRootPart.CFrame.Y,Players:FindFirstChild(MURD).Character.HumanoidRootPart.CFrame.Z),
     [3] = "AH"
 }
 
