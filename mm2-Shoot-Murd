@@ -14,7 +14,7 @@ UIS.InputBegan:Connect(function(input)
        end
    
        game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(game:GetService("Players"):FindFirstChild(tostring(MURD)).Character.HumanoidRootPart.CFrame.X, game:GetService("Players"):FindFirstChild(tostring(MURD)).Character.HumanoidRootPart.CFrame.Y, game:GetService("Players"):FindFirstChild(tostring(MURD)).Character.HumanoidRootPart.CFrame.Z + 3))
-       wait(.3)
+       wait()
        local args = {
         [1] = 1,
         [2] = Vector3.new(Players:FindFirstChild(MURD).Character.HumanoidRootPart.CFrame.X,Players:FindFirstChild(MURD).Character.HumanoidRootPart.CFrame.Y,Players:FindFirstChild(MURD).Character.HumanoidRootPart.CFrame.Z),
